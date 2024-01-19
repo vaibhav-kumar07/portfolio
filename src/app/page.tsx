@@ -1,6 +1,9 @@
-import LottieAnimation from "@/components/common/LottieAnimation";
 import codingBoy from "../../public/codingBoy.json";
 import FrontendAndBackend from "@/components/FrontendAndBackend";
+import React from "react";
+const LazyLottieAnimation = React.lazy(
+  () => import("@/components/common/LottieAnimation")
+);
 
 export default function Home() {
   return (
@@ -18,7 +21,9 @@ export default function Home() {
           </p>
         </div>
         <div className="w-1/2 ">
-          <LottieAnimation animationData={codingBoy} />
+          <React.Suspense fallback={<div>Loading...</div>}>
+            <LazyLottieAnimation animationData={codingBoy} />
+          </React.Suspense>
         </div>
       </div> */}
     </div>
