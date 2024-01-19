@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/common/ThemeProvider";
+import Navbar from "@/components/Navbar/Navbar";
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,9 +24,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="bg-primary-foreground flex justify-center w-full  overflow-y-hidden">
-            {children}
-          </main>
+          <div className=" sticky top-0  bg-primary ">
+            <Navbar />
+          </div>
+          <main className=" w-full h-full">{children}</main>
         </ThemeProvider>
       </body>
     </html>
