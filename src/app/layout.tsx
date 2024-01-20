@@ -24,9 +24,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className=" sticky top-0  bg-primary ">
-            <Navbar />
-          </div>
+          <Navbar />
+
           <main className=" w-full h-full">{children}</main>
         </ThemeProvider>
       </body>

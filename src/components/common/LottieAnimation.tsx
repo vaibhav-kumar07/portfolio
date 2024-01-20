@@ -9,5 +9,5 @@ interface LottieAnimationProps {
 export default function LottieAnimation({
   animationData,
 }: LottieAnimationProps) {
-  return <Lottie animationData={animationData} />;
+  return <Lottie className=" z-10" animationData={animationData} />;
 }

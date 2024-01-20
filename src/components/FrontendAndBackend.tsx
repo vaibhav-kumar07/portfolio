@@ -21,9 +21,9 @@ export default function FrontendAndBackend() {
   ];
 
   return (
-    <div className="flex w-full h-auto">
+    <div className="flex w-full h-[500px] bg-primary text-primary-foreground">
       <Section label="Frontend" technologies={frontendTechnologies} />
-      <div className=" w-1/3  flex justify-center items-center">
+      <div className=" w-1/3  flex justify-center items-center -z-0">
         <LottieAnimation animationData={table} />
       </div>
       <Section label="Backend" technologies={backendTechnologies} />
