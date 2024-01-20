@@ -13,8 +13,8 @@ export default function Navbar() {
     <nav className="sticky top-0  flex  pt-3 bg-primary z-20 bg-gradient-to-b from-primary  to-white ">
       <ul className="mx-auto flex  gap-2  rounded-3xl z-20 ">
         <NavItem href="/" label="Home" />
-        <NavItem href="/" label="About" />
-        <NavItem href="/" label="Projects" />
+        <NavItem href="/aboutus" label="About" />
+        <NavItem href="/projects" label="Projects" />
       </ul>
     </nav>
   );
