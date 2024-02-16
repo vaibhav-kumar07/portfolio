@@ -10,7 +10,7 @@ const NavItem = ({ href, label }: { href: string; label: string }) => (
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0  flex  pt-3 bg-primary z-20 bg-gradient-to-b from-primary  to-white ">
+    <nav className="sticky top-0  flex  pt-3 bg-primary z-20 bg-gradient-to-b from-prima pb-2">
       <ul className="mx-auto flex  gap-2  rounded-3xl z-20 ">
         <NavItem href="/" label="Home" />
         <NavItem href="/aboutus" label="About" />
