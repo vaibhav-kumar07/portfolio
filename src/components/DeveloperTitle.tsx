@@ -6,26 +6,21 @@ const DeveloperTitle: React.FC = () => {
   const [developerType, setDeveloperType] = useState<string>("");
 
   useEffect(() => {
-    // Check if running in the client-side environment
-    if (typeof window !== "undefined") {
-      const TypeIt = require("typeit");
+    const typeInstance = new TypeIt("#name", {
+      speed: 200,
+      breakLines: false,
+    });
 
-      const typeInstance = new TypeIt("#name", {
-        speed: 200,
-        breakLines: false,
-      });
-
-      typeInstance
-        .type(developerType)
-        .pause(1000)
-        .delete(developerType.length)
-        .exec((instance: any) => {
-          const newType = developerType === "Frontend" ? "Backend" : "Frontend";
-          setDeveloperType(newType);
-          instance.type(newType).go(); // Start the next animation with the updated type
-        })
-        .go();
-    }
+    typeInstance
+      .type(developerType)
+      .pause(1000)
+      .delete(developerType.length)
+      .exec((instance) => {
+        const newType = developerType === "Frontend" ? "Backend" : "Frontend";
+        setDeveloperType(newType);
+        instance.type(newType).go();
+      })
+      .go();
   }, [developerType]);
 
   return (
