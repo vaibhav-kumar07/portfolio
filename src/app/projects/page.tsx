@@ -1,5 +1,11 @@
 import React from "react";
 
 export default function page() {
-  return <div>page</div>;
+  const projectList = [
+    {
+      title: "",
+      Link: "",
+    },
+  ];
+  return <div></div>;
 }

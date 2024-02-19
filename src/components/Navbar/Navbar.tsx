@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 const NavItem = ({ href, label }: { href: string; label: string }) => (
-  <li className=" z-40 w-full  px-4 py-2 font-semibold tracking-wider text-green-200 transition duration-300 ease-in-out hover:bg-green-200 hover:text-primary  rounded-3xl flex items-center justify-center">
-    <Link href={href} className="">
+  <li className=" z-40 w-full  px-4 py-2  text-white transition duration-300 ease-in-out hover:bg-white hover:text-primary  rounded-3xl flex items-center justify-center">
+    <Link href={href} className="font-semibold hover:font-bold tracking-wider ">
       {label}
     </Link>
   </li>

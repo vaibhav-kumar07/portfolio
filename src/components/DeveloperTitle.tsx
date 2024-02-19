@@ -7,13 +7,13 @@ const DeveloperTitle: React.FC = () => {
 
   useEffect(() => {
     const typeInstance = new TypeIt("#name", {
-      speed: 200,
+      speed: 300,
       breakLines: false,
     });
 
     typeInstance
       .type(developerType)
-      .pause(1000)
+      .pause(1500)
       .delete(developerType.length)
       .exec((instance) => {
         const newType = developerType === "Frontend" ? "Backend" : "Frontend";
@@ -24,11 +24,11 @@ const DeveloperTitle: React.FC = () => {
   }, [developerType]);
 
   return (
-    <div className="w-full flex flex-col">
-      <h1 className="w-full text-4xl font-bold tracking-wider">
-        {`const name = "Vaibhav Kumar", `}
+    <div className="w-full text-3xl flex flex-col">
+      <h1 className="w-full  font-bold tracking-wider">
+        {`const name = "Vaibhav Kumar"; `}
       </h1>
-      <div className="w-full text-4xl font-bold tracking-wider">
+      <div className="w-full  font-bold tracking-wider">
         <span className="w-1/12">A</span>
         <span
           className="px-3 w-4/12 text-green-200 tracking-wide transition duration-300 ease-in-out hover:bg-green-200 hover:text-primary"
